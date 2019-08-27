@@ -1,5 +1,12 @@
 import React from "react";
 
-const VRPage = () => <div>VR</div>;
+import Card from "./Card";
+const VRPage = () => (
+  <div class="card-deck">
+    <Card />
+    <Card />
+    <Card />
+  </div>
+);
 
 export default VRPage;
