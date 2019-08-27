@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => (
   <header>
-    <h1>Game Reviews</h1>
-    <NavLink to="/" activeClassName="is-active" exact={true}>
+    <a href="/">
+      <h1>Game Reviews</h1>
+    </a>
+    <NavLink to="/pc" activeClassName="is-active" exact={true}>
       PC
     </NavLink>
     <NavLink to="/console" activeClassName="is-active">
