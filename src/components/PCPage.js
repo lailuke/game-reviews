@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Card from "./Card";
 
 const PCPage = () => (
-  <div class="card-deck">
+  <div className="card-deck">
     <Card />
     <Card />
     <Card />
