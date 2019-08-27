@@ -1,20 +1,25 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 const Header = () => (
   <header>
-    <a href="/">
-      <h1>Game Reviews</h1>
-    </a>
-    <NavLink to="/pc" activeClassName="is-active" exact={true}>
-      PC
-    </NavLink>
-    <NavLink to="/console" activeClassName="is-active">
-      Console
-    </NavLink>
-    <NavLink to="/vr" activeClassName="is-active">
-      VR
-    </NavLink>
+    <ul className="nav justify-content-center">
+      <li className="nav-item">
+        <a className="nav-link active" href="/">
+          <h1>Game Reviews</h1>
+        </a>
+      </li>
+    </ul>
+    <nav className="nav nav-pills nav-justified">
+      <a className="nav-item nav-link" href="/pc">
+        PC
+      </a>
+      <a className="nav-item nav-link" href="/console">
+        Console
+      </a>
+      <a className="nav-item nav-link" href="/vr">
+        VR
+      </a>
+    </nav>
   </header>
 );
 
