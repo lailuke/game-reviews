@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import gameReducer from "../reducers/games.js";
+import gameReducer from "../reducers/games";
 
 export default () => {
   const store = createStore(
