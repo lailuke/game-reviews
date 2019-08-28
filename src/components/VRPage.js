@@ -1,12 +1,6 @@
 import React from "react";
-import Card from "./Card";
+import CardList from "./CardList";
 
-const VRPage = () => (
-  <div className="card-deck">
-    <Card />
-    <Card />
-    <Card />
-  </div>
-);
+const VRPage = () => <CardList type={"VR"} />;
 
 export default VRPage;

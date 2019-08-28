@@ -1,12 +1,6 @@
 import React from "react";
-import Card from "./Card";
+import CardList from "./CardList";
 
-const ConsolePage = () => (
-  <div className="card-deck">
-    <Card />
-    <Card />
-    <Card />
-  </div>
-);
+const ConsolePage = () => <CardList type={"CON"} />;
 
 export default ConsolePage;
