@@ -14,7 +14,6 @@ export class Header extends React.Component {
   render() {
     return (
       <header>
-        {console.log(this.props.menus[0])}
         <ul className="nav justify-content-center">
           <li className="nav-item">
             <NavLink className="nav-link active" to="/">
@@ -22,45 +21,49 @@ export class Header extends React.Component {
             </NavLink>
           </li>
         </ul>
-        <nav className="nav nav-pills nav-justified">
-          <NavLink
-            onClick={this.test}
-            className={
-              this.props.menus[0].PCTab
-                ? "nav-item nav-link active"
-                : "nav-item nav-link"
-            }
-            to="/pc"
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            PC
-          </NavLink>
-          <NavLink
-            className={
-              this.props.menus[0].ConsoleTab
-                ? "nav-item nav-link active"
-                : "nav-item nav-link"
-            }
-            to="/console"
-          >
-            Console
-          </NavLink>
-          <NavLink
-            className={
-              this.props.menus[0].VRTab
-                ? "nav-item nav-link active"
-                : "nav-item nav-link"
-            }
-            to="/vr"
-          >
-            VR
-          </NavLink>
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item">
+                <NavLink exact className="nav-link" to="/">
+                  <strong>Home</strong>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/PC">
+                  <strong>PC</strong>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Console">
+                  <strong>Console</strong>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/vr">
+                  <strong>VR</strong>
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
     );
   }
 }
 
-const mapStateToProps = (state, props) => ({
+const mapStateToProps = state => ({
   menus: state.menuReducer
 });
 

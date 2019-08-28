@@ -14,7 +14,7 @@ const Router = () => (
       <Header />
       <Switch>
         <Route path="/" component={HomePage} exact={true} />
-        <Route path="/pc" component={PCPage} exact={true} />
+        <Route path="/pc" component={PCPage} />
         <Route path="/console" component={ConsolePage} />
         <Route path="/vr" component={VRPage} />
         <Route path="/help" component={HelpPage} />
