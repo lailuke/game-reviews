@@ -9,6 +9,16 @@
 }
 
 
+/* 
+.card-img-overlay {
+    position: absolute;
+    margin-top: 35% !important;
+    margin-left: 68% !important;
+    margin-right: 0% !important;
+    padding: 0;
+} */
+
+
 /* Smartphones (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

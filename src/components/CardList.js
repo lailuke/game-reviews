@@ -4,12 +4,11 @@ import Card from "./Card";
 
 export const CardList = props => (
   <div className="card-deck">
-    {console.log(props)}
-    {props.games.map(game => {
-      if (game.id.includes(props.type)) {
+    {props.games
+      .filter(game => game.id.includes(props.type))
+      .map(game => {
         return <Card key={game.id} {...game} />;
-      }
-    })}
+      })}
   </div>
 );
 
