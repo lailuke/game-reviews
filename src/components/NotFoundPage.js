@@ -3,13 +3,15 @@ import Axios from "axios";
 
 const NotFoundPage = () => {
   const buttonclick = () => {
-    Axios.get("https://api.github.com/users/mapbox").then(response => {
-      console.log(response.data);
-      console.log(response.status);
-      console.log(response.statusText);
-      console.log(response.headers);
-      console.log(response.config);
-    });
+    Axios.all([
+      Axios.get("https://api.github.com/users/mapbox"),
+      Axios.get("https://api.github.com/users/phantomjs")
+    ]).then(
+      Axios.spread((user1, user2) => {
+        console.log("Date created: ", user1.data.created_at);
+        console.log("Date created: ", user2.data.created_at);
+      })
+    );
   };
   return <button onClick={buttonclick}>404</button>;
 };
