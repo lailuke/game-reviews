@@ -1,15 +1,18 @@
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-}
-
-.card-deck {
-    padding: 1em;
-}
-
-
-/* 
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    
+    .card-deck {
+        padding: 1em;
+    }
+    
+    .card-deck>div[class*='col-'] {
+        display: flex;
+        flex: 1 0 auto;
+    }
+    /* 
 .card-img-overlay {
     position: absolute;
     margin-top: 35% !important;
@@ -17,20 +20,18 @@
     margin-right: 0% !important;
     padding: 0;
 } */
-
-
-/* Smartphones (portrait and landscape) ----------- */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    /* Styles */
-    .card-img-top {
-        width: 100%;
-        height: 50vw;
-        object-fit: cover;
+    /* Smartphones (portrait and landscape) ----------- */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        /* Styles */
+        .card-img-top {
+            width: 100%;
+            height: 50vw;
+            object-fit: cover;
+        }
+        .card {
+            margin: 0 auto;
+            float: none;
+            margin-bottom: 10px;
+        }
     }
-    .card {
-        margin: 0 auto;
-        float: none;
-        margin-bottom: 10px;
-    }
-}
