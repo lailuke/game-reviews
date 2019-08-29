@@ -28,7 +28,11 @@ class NotFoundPage extends React.Component {
     return (
       <div className="mx-auto">
         <button onClick={this.buttonclick}>404</button>
-        <img src={this.state.url} alt="x" />
+        <img
+          src={this.state.url}
+          alt="x"
+          style={this.state.url ? {} : { display: "none" }}
+        />
       </div>
     );
   }
