@@ -26,10 +26,10 @@ class NotFoundPage extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="mx-auto">
         <button onClick={this.buttonclick}>404</button>
         <img src={this.state.url} alt="x" />
-      </>
+      </div>
     );
   }
 }
